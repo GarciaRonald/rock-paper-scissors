@@ -1,5 +1,8 @@
 "use strict"
 
+let humanScore = 0;
+let computerScore = 0;
+
 // Function to return computer's choice
 const getComputerChoice = () => {
     const computerChoice = Math.floor(Math.random() * 3);
