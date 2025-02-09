@@ -11,3 +11,24 @@ const getComputerChoice = () => {
         return "scissors";
     }
 };
+
+// Function to return human's choice
+const getHumanChoice = () => {
+    const humanChoice = prompt("Please enter either rock, paper or scissors:", "");
+    switch (humanChoice.toLowerCase()) {
+        case "rock":
+        case "paper":
+        case "scissors":
+            return humanChoice.toLowerCase();
+            break;
+        default:
+            return "invalid input";
+            break;
+    }
+};
+
+// Testing block
+/* console.table({
+    comp: getComputerChoice(),
+    user: getHumanChoice()
+}); */
