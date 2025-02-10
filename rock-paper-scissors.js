@@ -60,3 +60,10 @@ const playRound = (humanChoice, computerChoice) => {
         }
     }
 };
+
+// Function to trigger an entire game play
+const playGame = () => {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+};
