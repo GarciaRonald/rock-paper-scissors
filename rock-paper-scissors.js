@@ -30,8 +30,33 @@ const getHumanChoice = () => {
     }
 };
 
-// Testing block
-/* console.table({
-    comp: getComputerChoice(),
-    user: getHumanChoice()
-}); */
+// Function to play a single round
+const playRound = (humanChoice, computerChoice) => {
+    if (humanChoice === computerChoice) {
+        console.log("Game is tied! Neither player gets a point.");
+    } else if (humanChoice === "rock") {
+        if (computerChoice === "paper") {
+            console.log("Computer wins! Paper beats rock.");
+            computerScore++;
+        } else if (computerChoice === "scissors") {
+            console.log("You win! Rock beats scissors.");
+            humanScore++
+        }
+    } else if (humanChoice === "paper") {
+        if (computerChoice === "rock") {
+            console.log("You win! Paper beats rock.");
+            humanScore++;
+        } else if (computerChoice === "scissors") {
+            console.log("Computer wins! Scissors beat paper.");
+            computerScore++;
+        }
+    } else if (humanChoice === "scissors") {
+        if (computerChoice === "rock") {
+            comsole.log("Computer wins! Rock beats scissors.");
+            computerScore++;
+        } else if (computerChoice === "paper") {
+            console.log("You win! Scissors beat paper.");
+            humanScore++;
+        }
+    }
+};
