@@ -67,3 +67,14 @@ const playGame = () => {
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
 };
+
+// Play game 5 times
+for (let round = 1; round <= 5; round++) {
+    console.log(`Round ${round}`);
+    playGame();
+    if (round < 5) {
+        console.log(`Current score:\nYou: ${humanScore}, Computer: ${computerScore}`);
+    } else {
+        console.log(`Final score:\nYou: ${humanScore}, Computer: ${computerScore}`);
+    }
+}
