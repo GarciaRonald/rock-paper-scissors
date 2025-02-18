@@ -18,6 +18,15 @@ const resetGame = () => {
     const resetButton = document.createElement("button");
     resetButton.textContent = "Reset Game";
     paraWinner.appendChild(resetButton);
+    resetButton.addEventListener("click", () => {
+        humanScore = 0;
+        computerScore = 0;
+        spanPScore.textContent = "";
+        spanCScore.textContent = "";
+        paraMsg.innerHTML = "";
+        paraWinner.innerHTML = "";
+        resetButton.remove();
+    });
 };
 
 const updateScores = msg => {
