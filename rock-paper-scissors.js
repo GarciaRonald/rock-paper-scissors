@@ -40,21 +40,6 @@ const getComputerChoice = () => {
     }
 };
 
-// Function to return human's choice
-const getHumanChoice = () => {
-    const humanChoice = prompt("Please enter either rock, paper or scissors:", "");
-    switch (humanChoice.toLowerCase()) {
-        case "rock":
-        case "paper":
-        case "scissors":
-            return humanChoice.toLowerCase();
-            break;
-        default:
-            return "invalid input";
-            break;
-    }
-};
-
 // Function to play a single round
 const playRound = (humanChoice, computerChoice) => {
     if (humanChoice === computerChoice) {
