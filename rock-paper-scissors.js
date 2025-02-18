@@ -12,6 +12,14 @@ let humanScore = 0;
 let computerScore = 0;
 let currRoundResult = "";
 
+const resetGame = () => {
+    const finalMsg = (humanScore === 5 && "You win!") || (computerScore === 5 && "Computer wins!");
+    paraWinner.innerHTML = `<h3>${finalMsg}</h3>`;
+    const resetButton = document.createElement("button");
+    resetButton.textContent = "Reset Game";
+    paraWinner.appendChild(resetButton);
+};
+
 const updateScores = msg => {
     spanPScore.textContent = humanScore;
     spanCScore.textContent = computerScore;
@@ -19,6 +27,10 @@ const updateScores = msg => {
 };
 
 btnRock.addEventListener("click", () => {
+    if (humanScore === 5 || computerScore === 5) {
+        resetGame();
+        return;
+    }
     const humanChoice = "rock";
     const computerChoice = getComputerChoice();
     currRoundResult = playRound(humanChoice, computerChoice);
@@ -26,6 +38,10 @@ btnRock.addEventListener("click", () => {
 });
 
 btnPaper.addEventListener("click", () => {
+    if (humanScore === 5 || computerScore === 5) {
+        resetGame();
+        return;
+    }
     const humanChoice = "paper";
     const computerChoice = getComputerChoice();
     currRoundResult = playRound(humanChoice, computerChoice);
@@ -33,6 +49,10 @@ btnPaper.addEventListener("click", () => {
 });
 
 btnScissors.addEventListener("click", () => {
+    if (humanScore === 5 || computerScore === 5) {
+        resetGame();
+        return;
+    }
     const humanChoice = "scissors";
     const computerChoice = getComputerChoice();
     currRoundResult = playRound(humanChoice, computerChoice);
