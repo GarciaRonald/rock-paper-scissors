@@ -1,5 +1,12 @@
 "use strict"
 
+const btnRock = document.querySelector("#rock");
+const btnPaper = document.querySelector("#paper");
+const btnScissors = document.querySelector("#scissors");
+const spanPScore = document.querySelector(".p-score");
+const spanCScore = document.querySelector(".c-score");
+const paraWinner = document.querySelector(".winner");
+
 let humanScore = 0;
 let computerScore = 0;
 
