@@ -10,22 +10,30 @@ const paraWinner = document.querySelector(".winner");
 let humanScore = 0;
 let computerScore = 0;
 
+const updateScores = () => {
+    spanPScore.textContent = humanScore;
+    spanCScore.textContent = computerScore;
+};
+
 btnRock.addEventListener("click", () => {
     const humanChoice = "rock";
     const computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
+    updateScores();
 });
 
 btnPaper.addEventListener("click", () => {
     const humanChoice = "paper";
     const computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
+    updateScores();
 });
 
 btnScissors.addEventListener("click", () => {
     const humanChoice = "scissors";
     const computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
+    updateScores();
 });
 
 // Function to return computer's choice
