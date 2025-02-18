@@ -10,6 +10,24 @@ const paraWinner = document.querySelector(".winner");
 let humanScore = 0;
 let computerScore = 0;
 
+btnRock.addEventListener("click", () => {
+    const humanChoice = "rock";
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+});
+
+btnPaper.addEventListener("click", () => {
+    const humanChoice = "paper";
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+});
+
+btnScissors.addEventListener("click", () => {
+    const humanChoice = "scissors";
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+});
+
 // Function to return computer's choice
 const getComputerChoice = () => {
     const computerChoice = Math.floor(Math.random() * 3);
